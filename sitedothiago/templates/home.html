@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+  <link rel="stylesheet" href="{% static 'sitedothiago/css/style.css' %}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1> Thiago Vieira Saavedra</h1>
+    <h2>O Futebol na Arábia Saudita</h2>
+    <p>Nos últimos anos, tem havido um aumento significativo na migração de jogadores de futebol para clubes sediados na <b>Arábia Saudita</b>. Esse movimento é impulsionado por vários fatores, incluindo os <u>generosos salários</u> oferecidos pelos clubes sauditas, que muitas vezes superam as ofertas de outras ligas. Além disso, a crescente qualidade e visibilidade do futebol na região, juntamente com investimentos substanciais em infraestrutura esportiva e programas de desenvolvimento, têm atraído <a href = "https://www.goal.com/br/listas/jogadores-famosos-futebol-arabia-saudita-contratacoes-proxima-temporada/bltd1eaa3dadc5d0193#cs600d2c0d13d32314" target = "_blank" >jogadores de renome internacional</a>, como <i>Neymar Jr </i> e <i>Kalidou Koulibaly</i>. No entanto, essa mudança também suscitou debates sobre as implicações éticas e esportivas, considerando as preocupações relacionadas aos direitos humanos no país e às possíveis consequências para as competições globais.</p>
+    <p>Segue uma lista dos principais motivos pelos quais os jogadores têm optado por se transferir para clubes na Arábia Saudita:</p>
+    <ul>
+      {% for tabela in tabela %}
+      <li>{{tabela.title}}
+        <a href = "/tabela/update/{{tabela.id}}"Atualizar</a>
+        <a href = "/tabela/delete/{{tabela.id}}"Remover</a>
+      </li>
+    {% endfor %}
+      <!--<li>
+        <b>Salários atrativos:</b>Os clubes na Arábia Saudita costumam oferecer salários substancialmente mais altos do que muitos outros clubes ao redor do mundo. Isso pode ser um fator decisivo para os jogadores que buscam uma recompensa financeira significativa durante suas carreiras.
+      </li>
+      <li>
+        <b>Isenção fiscal:</b>A Arábia Saudita tem políticas fiscais favoráveis para os jogadores estrangeiros, o que significa que os jogadores podem reter uma parcela maior de seus salários, já que não estão sujeitos a certos impostos sobre a renda.
+      </li>
+      <li>
+        <b>Estrutura e infraestrutura dos clubes:</b>Muitos clubes na Arábia Saudita têm feito investimentos na construção de instalações de treinamento modernas e estádios de alta qualidade. Isso pode ser atraente para os jogadores que valorizam ambientes de treinamento de primeira classe.
+      </li>
+      <li>
+        <b>Oportunidade de liderança e destaque:</b>Alguns jogadores podem ver a oportunidade de se destacar como líderes em clubes da Arábia Saudita, o que pode ser uma perspectiva atraente para aqueles que desejam um papel mais proeminente dentro de uma equipe.
+      </li>
+      <li>
+        <b>Desafio competitivo:</b>Embora possa haver estigmas sobre o nível de competição nas ligas da Arábia Saudita, muitos jogadores veem isso como uma oportunidade de enfrentar desafios diferentes e contribuir para o desenvolvimento do futebol no país.
+      </li>-->
+    </ul>
+  <a href = "/tabela">Adicionar outro motivo</a>
+  <div><img src = "https://static.poder360.com.br/2023/08/neymar-jr-al-hilal-848x477.png" width = 400></div>
+  <p>Foto acima de Neymar Jr, um dos maiores atletas futebolísticos da atualidade que fechou um contrato milionário com o time da arábia Al-Hilal. É importante ressaltar que não foi o brasileiro, o único que aceitou tais contratos:</p>
+  <table>
+  <tr>
+    <th><b>Jogador</b></th>
+    <th><b>Time</b></th>
+    <th><b>Valor do Contrato</b></th>
+  </tr>
+  <tr>
+    <td>Neymar Jr</td>
+    <td>Al-Hilal</td>
+    <td>80 milhões</td>
+  </tr>
+  <tr>
+    <td>Cristiano Ronaldo</td>
+    <td>Al-Nassr</td>
+    <td>500 milhões</td>
+  </tr>
+    <tr>
+    <td>Karin Benzema</td>
+    <td>Al-Ittihad </td>
+    <td>200 milhões</td>
+  </tr>
+    <tr>
+    <td>Kalidou Koulibaly</td>
+    <td>Al Hilal</td>
+    <td>30 milhões</td>
+  </tr>
+    <tr>
+    <td>Rúben Neves</td>
+    <td>Al Hilal</td>
+    <td>55 milhões</td>
+  </tr>
+</table>
+  <p>É importante comentar que o campeonato árabe tá sendo cada vez mais disputado entre os times e futuramente será uma das 5 maiores ligas de futebol do mundo. A lista em ordem dos times da última temporada terminou assim:</p>
+  <!--<ol>
+    <li>Al-Ittihad</li>
+    <li>Al-Nassr</li>
+    <li>Al-Hilal</li>
+    <li>Al-Shabab</li>
+    <li>Al-Taawon</li>
+    <li>Al-Fateh</li>
+    <li>Al-Ettifaq</li>
+    
+  
+  </ol>-->
+  <ol>
+    {% for tabela in tabela%}
+      <li>{{tabela.title}}</li>
+    {% endfor %}
+  </ol>
+</body>
+
+</html>

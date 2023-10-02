@@ -1,0 +1,19 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+p{
+  font-family: "Times New Roman", monospace;
+}
+body {
+  background-color: #ffffd6;
+}
+table,tr,td{
+  border:1px solid;
+}
+h1{
+  text-align: center;
+}
+div{
+  text-align:center;
+}

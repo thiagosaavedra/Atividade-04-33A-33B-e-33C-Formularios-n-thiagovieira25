@@ -1,0 +1,24 @@
+<h1>{{ action }} Motivo</h1>
+
+<form method="post">
+  {% crsf_token %}
+  <div>
+    <label>Motivo:</label>
+    <input name="title" value="{{ tabela.title }}">
+  </div>
+  <div>
+    <label>Cor:</label>
+    <input name="cor" value="{{ tabela.cor }}" >
+  </div>
+  <div>
+    <label>Formação:</label>
+    <input name="formacao" value="{{ tabela.formacao }}">
+  </div>
+  <div>
+    <label>Capitão:</label>
+    <input name="capitao" value="{{ tabela.capitao }}">
+  </div>
+
+  <input type="submit" value="Registrar">
+</form>
+
