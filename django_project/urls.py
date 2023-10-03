@@ -23,4 +23,5 @@ urlpatterns = [
     path("motivos/update/<id>",views.update_motivo),
     path("motivos/delete/<id>",views.delete_motivo),
     path("motivos",views.create_motivo)
+
 ]
